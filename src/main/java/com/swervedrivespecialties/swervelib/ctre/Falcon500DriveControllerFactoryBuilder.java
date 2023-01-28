@@ -55,8 +55,7 @@ public final class Falcon500DriveControllerFactoryBuilder {
             motorOutputConfig.Inverted = moduleConfiguration.isDriveInverted() ? InvertedValue.Clockwise_Positive : InvertedValue.CounterClockwise_Positive;
 
 
-            double sensorPositionCoefficient = Math.PI * moduleConfiguration.getWheelDiameter() * moduleConfiguration.getDriveReduction() / TICKS_PER_ROTATION;
-            double sensorVelocityCoefficient = sensorPositionCoefficient * 10.0;
+            double sensorPositionCoefficient = Math.PI * moduleConfiguration.getWheelDiameter() * moduleConfiguration.getDriveReduction();
 
             if (hasVoltageCompensation()) {
                 voltageConfig.PeakForwardVoltage = nominalVoltage;
@@ -91,18 +90,18 @@ public final class Falcon500DriveControllerFactoryBuilder {
             //         "Failed to configure Falcon status frame period"
             // );
 
-            return new ControllerImplementation(motor, sensorVelocityCoefficient);
+            return new ControllerImplementation(motor, sensorPositionCoefficient);
         }
     }
 
     private class ControllerImplementation implements DriveController {
         private final TalonFX motor;
-        private final double sensorVelocityCoefficient;
+        private final double sensorCoefficient;
         private final double nominalVoltage = hasVoltageCompensation() ? Falcon500DriveControllerFactoryBuilder.this.nominalVoltage : 12.0;
 
-        private ControllerImplementation(TalonFX motor, double sensorVelocityCoefficient) {
+        private ControllerImplementation(TalonFX motor, double sensorCoefficient) {
             this.motor = motor;
-            this.sensorVelocityCoefficient = sensorVelocityCoefficient;
+            this.sensorCoefficient = sensorCoefficient;
         }
 
         @Override
@@ -112,12 +111,12 @@ public final class Falcon500DriveControllerFactoryBuilder {
 
         @Override
         public double getPosition() {
-            return motor.getRotorPosition().getValue() * (sensorVelocityCoefficient / 10.0);
+            return motor.getRotorPosition().getValue() * sensorCoefficient;
         }
 
         @Override
         public double getStateVelocity() {
-            return motor.getRotorVelocity().getValue() * sensorVelocityCoefficient;
+            return motor.getRotorVelocity().getValue() * sensorCoefficient;
         }
 
         @Override
