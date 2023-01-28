@@ -264,7 +264,7 @@ public final class Falcon500SteerControllerFactoryBuilder {
 
         @Override
         public void setCanStatusFramePeriodReductions() {
-            System.out.println("Start Falcon Stear Can Reduction.");
+            //System.out.println("Start Falcon Stear Can Reduction.");
             // motor.setStatusFramePeriod(StatusFrameEnhanced.Status_1_General, 255);
             // motor.setStatusFramePeriod(StatusFrameEnhanced.Status_2_Feedback0, 10);
             // motor.setStatusFramePeriod(StatusFrameEnhanced.Status_4_AinTempVbat, 255);
@@ -280,8 +280,8 @@ public final class Falcon500SteerControllerFactoryBuilder {
             // motor.setStatusFramePeriod(StatusFrameEnhanced.Status_14_Turn_PIDF1, 255);
             // motor.setStatusFramePeriod(StatusFrameEnhanced.Status_15_FirmwareApiStatus, 255);
             // motor.setStatusFramePeriod(StatusFrameEnhanced.Status_Brushless_Current, 255);
-            System.out.printf("Steer Falcon %1d: Reduced CAN message rates.", motor.getDeviceID());
-            System.out.println();
+            // System.out.printf("Steer Falcon %1d: Reduced CAN message rates.", motor.getDeviceID());
+            // System.out.println();
         }
 
     }

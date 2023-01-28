@@ -1,6 +1,5 @@
 package com.swervedrivespecialties.swervelib;
 
-import edu.wpi.first.wpilibj.shuffleboard.BuiltInLayouts;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardLayout;
 
 public class SwerveModuleFactory<DriveConfiguration, SteerConfiguration> {
@@ -45,7 +44,7 @@ public class SwerveModuleFactory<DriveConfiguration, SteerConfiguration> {
         private ModuleImplementation(DriveController driveController, SteerController steerController) {
             this.driveController = driveController;
             this.steerController = steerController;
-            System.out.println("swerve-lib 1.05");
+            System.out.println("swerve-lib 2.1");
         }
 
         @Override
