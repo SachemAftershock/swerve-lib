@@ -1,6 +1,6 @@
 package com.swervedrivespecialties.swervelib.ctre;
 
-import com.ctre.phoenixpro.StatusCode;
+import com.ctre.phoenix6.StatusCode;
 
 import edu.wpi.first.wpilibj.DriverStation;
 

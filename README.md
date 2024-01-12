@@ -1,3 +1,9 @@
+# Changes 
+
+- WPILIB updated to 2024.1.1
+- Pheonix Pro library updated to 24.1.0 (Now called Pheonix 6)
+- REVLib updated to 2024.0.0
+
 # Sachem Aftershock Swerve Library
 
 This repository is a fork of the unmaintained SDS Swerve Library, updated to interface the Phoenix Pro Library and include methods needed for updated WPILib calls.
