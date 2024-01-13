@@ -1,3 +1,10 @@
+# Hosting on Jitpack Instructions 
+
+- For adding a Jitpack repository to your build follow instructions on this link https://jitpack.io/
+- Make a new release on Github of your repository
+- Insert repository link on Jitpack to find your latest release
+- In build.gradle file change "implementation 'com.github.SachemAftershock:swerve-lib:2.2'" to your latest release version
+
 # Changes 
 
 - WPILIB updated to 2024.1.1
