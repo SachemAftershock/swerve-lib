@@ -41,6 +41,10 @@ public final class NeoDriveControllerFactoryBuilder {
     private class FactoryImplementation implements DriveControllerFactory<ControllerImplementation, Integer> {
         @Override
         public ControllerImplementation create(Integer id, ModuleConfiguration moduleConfiguration) {
+
+            System.out.println("----------------------- THIS IS A TEST ----------------------------------");
+
+
             CANSparkMax motor = new CANSparkMax(id, CANSparkLowLevel.MotorType.kBrushless);
             motor.setInverted(moduleConfiguration.isDriveInverted());
 

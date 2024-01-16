@@ -177,6 +177,9 @@ public final class Mk4iSwerveModuleHelper {
             int steerEncoderPort,
             double steerOffset
     ) {
+
+        System.out.println("----------------------- THIS IS A TEST ----------------------------------");
+
         return new SwerveModuleFactory<>(
                 gearRatio.getConfiguration(),
                 getNeoDriveFactory(configuration),
