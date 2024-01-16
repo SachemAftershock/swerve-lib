@@ -31,7 +31,7 @@ dependencies {
     implementation 'com.ctre.phoenix6:wpiapi-java:24.1.0'
 
     // REV is implementation because it is not a hard requirement
-    implementation 'com.revrobotics.frc:REVLib-java:2023.0.0'
+    implementation 'com.revrobotics.frc:REVLib-java:2024.0.0'
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
