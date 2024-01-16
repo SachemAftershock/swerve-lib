@@ -1,9 +1,9 @@
 package com.swervedrivespecialties.swervelib.rev;
 
 import com.revrobotics.CANSparkMax;
-import com.revrobotics.CANSparkMaxLowLevel;
+//import com.revrobotics.CANSparkMaxLowLevel;
 import com.revrobotics.RelativeEncoder;
-import com.revrobotics.CANSparkMax.IdleMode;
+//import com.revrobotics.CANSparkMax.IdleMode;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 import com.revrobotics.CANSparkMaxLowLevel.PeriodicFrame;
 import com.swervedrivespecialties.swervelib.DriveController;
@@ -57,7 +57,7 @@ public final class NeoDriveControllerFactoryBuilder {
             checkNeoError(motor.setPeriodicFramePeriod(PeriodicFrame.kStatus1, 20), "Failed to set periodic status frame 1 rate");
             checkNeoError(motor.setPeriodicFramePeriod(PeriodicFrame.kStatus2, 20), "Failed to set periodic status frame 2 rate");
             // Set neutral mode to brake
-            motor.setIdleMode(IdleMode.kBrake);
+            //motor.setIdleMode(IdleMode.kBrake);
 
             // Setup encoder
             RelativeEncoder encoder = motor.getEncoder();
