@@ -53,9 +53,9 @@ public final class NeoDriveControllerFactoryBuilder {
                 checkNeoError(motor.setSmartCurrentLimit((int) currentLimit), "Failed to set current limit for NEO");
             }
 
-            checkNeoError(motor.setPeriodicFramePeriod(PeriodicFrame.kStatus0, 100), "Failed to set periodic status frame 0 rate");
-            checkNeoError(motor.setPeriodicFramePeriod(PeriodicFrame.kStatus1, 20), "Failed to set periodic status frame 1 rate");
-            checkNeoError(motor.setPeriodicFramePeriod(PeriodicFrame.kStatus2, 20), "Failed to set periodic status frame 2 rate");
+            // checkNeoError(motor.setPeriodicFramePeriod(PeriodicFrame.kStatus0, 100), "Failed to set periodic status frame 0 rate");
+            // checkNeoError(motor.setPeriodicFramePeriod(PeriodicFrame.kStatus1, 20), "Failed to set periodic status frame 1 rate");
+            // checkNeoError(motor.setPeriodicFramePeriod(PeriodicFrame.kStatus2, 20), "Failed to set periodic status frame 2 rate");
             // Set neutral mode to brake
             //motor.setIdleMode(IdleMode.kBrake);
 
