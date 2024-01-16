@@ -44,7 +44,7 @@ public class SwerveModuleFactory<DriveConfiguration, SteerConfiguration> {
         private ModuleImplementation(DriveController driveController, SteerController steerController) {
             this.driveController = driveController;
             this.steerController = steerController;
-            System.out.println("swerve-lib 2.2");
+            System.out.println("-------------------- Swerve-lib 2.4.1 --------------------");
         }
 
         @Override
