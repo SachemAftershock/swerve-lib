@@ -24,16 +24,16 @@ allprojects {
 }
 
 dependencies {
-    implementation 'edu.wpi.first.wpilibj:wpilibj-java:2024.1.1'
+    implementation 'edu.wpi.first.wpilibj:wpilibj-java:2025.1.1'
 
     // CTRE is implementation because it is not a hard requirement
     implementation 'com.ctre.phoenix6:api-java:24.1.0'
-    implementation 'com.ctre.phoenix6:wpiapi-java:24.1.0'
+    implementation 'com.ctre.phoenix6:wpiapi-java:25.1.0'
 
     // REV is implementation because it is not a hard requirement
-    implementation 'com.revrobotics.frc:REVLib-java:2024.2.0'
+    implementation 'com.revrobotics.frc:REVLib-java:2025.0.0'
 
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2' //Maybe change to 5.10.1
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 }
 
