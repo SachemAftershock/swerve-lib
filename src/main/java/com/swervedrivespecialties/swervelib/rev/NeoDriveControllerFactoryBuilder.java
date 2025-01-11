@@ -94,7 +94,7 @@ public final class NeoDriveControllerFactoryBuilder {
 
         @Override
         public void setReferenceVoltage(double voltage) {
-            motor.setVoltage(voltage);
+            System.out.println("Voltage REF: 0");
             // motor.setVoltage(voltage);
         }
 
