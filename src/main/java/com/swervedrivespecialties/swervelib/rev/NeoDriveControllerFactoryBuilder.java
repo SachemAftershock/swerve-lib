@@ -1,5 +1,7 @@
 package com.swervedrivespecialties.swervelib.rev;
 import com.revrobotics.spark.SparkMax;
+import com.revrobotics.spark.config.SparkBaseConfig.IdleMode;
+import com.revrobotics.spark.config.SparkMaxConfig;
 
 import static com.swervedrivespecialties.swervelib.rev.RevUtils.checkNeoError;
 
@@ -43,7 +45,7 @@ public final class NeoDriveControllerFactoryBuilder {
 
             System.out.println("----------------------- THIS IS A TEST ----------------------------------");
 
-
+            SparkMaxConfig motorConfig = new SparkMaxConfig();
             SparkMax motor = new SparkMax(id, SparkLowLevel.MotorType.kBrushless);
             motor.setInverted(moduleConfiguration.isDriveInverted());
 
@@ -70,7 +72,7 @@ public final class NeoDriveControllerFactoryBuilder {
             System.out.println("----------------------- THIS IS A TEST ----------------------------------");
 
 
-            // motor.setIdleMode(IdleMode.kBrake); TODO: brake to begin with
+            motorConfig.setIdleMode(IdleMode.kBrake); //TODO: brake to begin with
 
             // Setup encoder
             RelativeEncoder encoder = motor.getEncoder();
